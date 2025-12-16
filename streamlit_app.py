@@ -5,7 +5,19 @@ import re
 import html
 
 st.title("ReviewGuard – AI Review Detector & Regret Predictor")
-st.write("Built by Kavish (13, India) — detects AI-generated reviews and predicts buyer regret")
+from huggingface_hub import hf_hub_download
+import joblib
+
+st.write("Loading models from Hugging Face...")
+
+# Use your actual model repo name here
+ai_detector_path = hf_hub_download(repo_id="kavrobot/YOUR-MODEL-REPO-NAME", filename="ai_detector_fixed.pkl")
+regret_predictor_path = hf_hub_download(repo_id="kavrobot/YOUR-MODEL-REPO-NAME", filename="regret_predictor_fixed.pkl")
+
+ai_detector = joblib.load(ai_detector_path)
+regret_predictor = joblib.load(regret_predictor_path)
+
+st.success("Models loaded!")
 
 # Load models
 from huggingface_hub import hf_hub_download
