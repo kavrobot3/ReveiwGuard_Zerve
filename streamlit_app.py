@@ -13,8 +13,8 @@ import joblib
 
 st.write("Loading models from Hugging Face... (first time takes a minute)")
 
-ai_detector_path = hf_hub_download(repo_id="kavrobot/your-model-repo-name", filename="ai_detector_fixed.pkl")
-regret_predictor_path = hf_hub_download(repo_id="kavrobot/your-model-repo-name", filename="regret_predictor_fixed.pkl")
+ai_detector_path = hf_hub_download(repo_id="kavrobot/ReveiwGuard3", filename="ai_detector_fixed.pkl")
+regret_predictor_path = hf_hub_download(repo_id="kavrobot/ReveiwGuard3", filename="regret_predictor_fixed.pkl")
 
 ai_detector = joblib.load(ai_detector_path)
 regret_predictor = joblib.load(regret_predictor_path)
