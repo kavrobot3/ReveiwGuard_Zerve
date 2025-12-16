@@ -8,8 +8,18 @@ st.title("ReviewGuard – AI Review Detector & Regret Predictor")
 st.write("Built by Kavish (13, India) — detects AI-generated reviews and predicts buyer regret")
 
 # Load models
-ai_detector = joblib.load('ai_detector_fixed.pkl')
-regret_predictor = joblib.load('regret_predictor_fixed.pkl')
+from huggingface_hub import hf_hub_download
+import joblib
+
+st.write("Loading models from Hugging Face... (first time takes a minute)")
+
+ai_detector_path = hf_hub_download(repo_id="kavrobot/your-model-repo-name", filename="ai_detector_fixed.pkl")
+regret_predictor_path = hf_hub_download(repo_id="kavrobot/your-model-repo-name", filename="regret_predictor_fixed.pkl")
+
+ai_detector = joblib.load(ai_detector_path)
+regret_predictor = joblib.load(regret_predictor_path)
+
+st.success("Models loaded!")
 
 # Clean text function
 def clean_text(text_input):
