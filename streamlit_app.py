@@ -4,8 +4,8 @@ import joblib
 st.write("Loading models from Hugging Face...")
 
 # Use your actual model repo name here
-ai_detector_path = hf_hub_download(repo_id="kavrobot/reviewguard-models", filename="ai_detector_fixed.pkl")
-regret_predictor_path = hf_hub_download(repo_id="kavrobot/reviewguard-models", filename="regret_predictor_fixed.pkl")
+ai_detector_path = hf_hub_download(repo_id="kavrobot/reviewguard-models", filename="ai_detector_xgb.pkl")
+regret_predictor_path = hf_hub_download(repo_id="kavrobot/reviewguard-models", filename="regret_predictor_xgb.pkl")
 
 ai_detector = joblib.load(ai_detector_path)
 regret_predictor = joblib.load(regret_predictor_path)
