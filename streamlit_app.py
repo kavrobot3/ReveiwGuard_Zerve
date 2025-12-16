@@ -7,9 +7,9 @@ import html
 st.title("ReviewGuard – AI Review Detector & Regret Predictor")
 st.write("Built by Kavish (Grade 8, India) — detects AI-generated reviews and predicts buyer regret")
 
-# Load models (they are small now, so local load works)
-ai_detector = joblib.load('ai_detector_fixed.pkl')
-regret_predictor = joblib.load('regret_predictor_fixed.pkl')
+# Load the compatible models directly
+ai_detector = joblib.load('ai_detector_compatible.pkl')
+regret_predictor = joblib.load('regret_predictor_compatible.pkl')
 
 def clean_text(text_input):
     if not isinstance(text_input, str) or not text_input.strip():
