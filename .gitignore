@@ -1,0 +1,2 @@
+/workspaces/ReveiwGuard_Zerve/.venv/bin/python -m streamlit run streamlit_app.py --server.headless true --server.port 8501
+U have to run the aboc=ve to open AI on local host(streamlit app, port 8501) 
