@@ -6,8 +6,8 @@ import html
 import numpy as np
 from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
 
-# Display logo above title
-st.image("FullLogo_Transparent.png", width=300)
+# Display logo on top left
+st.image("FullLogo_Transparent.png", width=150)
 
 st.title("ReviewGuard – AI Review Detector & Regret Predictor")
 st.write("Built by Kavish (Grade 8) — detects AI-generated reviews and predicts buyer regret")
