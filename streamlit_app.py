@@ -6,10 +6,13 @@ import html
 import numpy as np
 from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
 
-# Display logo on top left
-st.image("FullLogo_Transparent.png", width=150)
-
 st.title("ReviewGuard – AI Review Detector & Regret Predictor")
+
+# Display logo in center below title
+col1, col2, col3 = st.columns([1, 2, 1])
+with col2:
+    st.image("FullLogo_Transparent.png", width=200)
+
 st.write("Built by Kavish (Grade 8) — detects AI-generated reviews and predicts buyer regret")
 
 # Load the compatible models directly
